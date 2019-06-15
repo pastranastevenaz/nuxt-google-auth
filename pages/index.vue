@@ -1,27 +1,20 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        webhost
-      </h1>
+      <!-- <logo /> -->
       <h2 class="subtitle">
-
+          VueJS | Google Auth
       </h2>
-      <button outline fab @click="googleSignIn" color="#4285F4">Sign in</button>
 
-      <div class="links">
+
+
+        <p class="subtitle is-5">Authenticate with your Google Account</p>
         <a
           @click="googleSignIn"
           target="_blank"
           class="button--green"
         >Sign in</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
+
     </div>
   </div>
 </template>
@@ -60,7 +53,7 @@ export default {
 
           this.uName = result.user;
           this.$store.dispatch('changeUser', result.user);
-          this.$router.push('/home')
+          this.$router.push('/home');
         }).catch(e => {
           // this.$snotify.error(e.message)
           console.log(e)

@@ -1,7 +1,7 @@
 
 import firebase from 'firebase'
 
-let firebaseConfig = {
+let config = {
   apiKey: "AIzaSyA6SS5BvjPbW7Du0rzRSpK7qlo2OzY76zA",
   authDomain: "webhost-wbhst.firebaseapp.com",
   databaseURL: "https://webhost-wbhst.firebaseio.com",
@@ -13,7 +13,7 @@ let firebaseConfig = {
 
 let app = null
 if (!firebase.apps.length) {
- firebase.initializeApp(firebaseConfig)
+  app = firebase.initializeApp(config)
 }
 
 export const db = app.database()

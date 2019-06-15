@@ -1,11 +1,23 @@
 <template>
   <div>
+    <Nav />
     <nuxt />
-    <p>hello worlds</p>
+    <Footer />
   </div>
 </template>
 <script>
+import Nav from '~/components/Nav.vue'
+import Footer from '~/components/Footer.vue'
 export default{
+  head: {
+    bodyAttrs: {
+      class: 'has-navbar-fixed-top'
+    }
+  },
+  components: {
+    Nav,
+    Footer
+  },
   mounted() {
     //do something after mounting vue instance
     console.log('Hello worlds');
